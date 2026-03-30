@@ -91,28 +91,8 @@ function setDistrictUpdates(list){
   setDistrictUpdates(updates);
 })();
 
-// Add animated sea-themed doodles on every page.
-document.addEventListener('DOMContentLoaded', ()=>{
-  const anchors = Array.from({length:4},()=> '⚓');
-  const ships = Array.from({length:4},()=> '⛵');
-  const waves = Array.from({length:4},()=> '🌊');
-  const compasses = Array.from({length:2},()=> '🧭');
-  const doodles = [...anchors, ...ships, ...waves, ...compasses];
-  doodles.sort(()=>Math.random()-0.5);
+// Doodles disabled
 
-  doodles.forEach((emoji, i)=>{
-    const c = document.createElement('span');
-    const sizeClass = i % 3 === 0 ? 'large' : (i % 2 === 0 ? 'small' : '');
-    c.className = 'doodle-floating ' + sizeClass;
-    c.textContent = emoji;
-    c.style.left = `${5 + Math.random() * 85}%`;
-    c.style.top = `${5 + Math.random() * 85}%`;
-    c.style.animationDuration = `${5 + Math.random() * 7}s`;
-    c.style.animationDelay = `${Math.random() * 4}s`;
-    c.style.zIndex = '0';
-    document.body.appendChild(c);
-  });
-});
 
 
 
